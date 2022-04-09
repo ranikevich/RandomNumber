@@ -1,5 +1,6 @@
 'use strict';
 
+let randomNum = parseInt(Math.random() * 100);
 
 function guessNumber(x) {
     function askAnalyzeNumber() {
@@ -11,12 +12,14 @@ function guessNumber(x) {
             (x < a) ? a = confirm('Загаданное число меньше') :
             (x > a) ? a = confirm('Загаданное число больше') : null;
             askAnalyzeNumber();
+        } else {
+            alert("Поздравляю!!! Вы угадали");
         }
-        return alert("Поздравляю, Вы угадали!!!");  
-    } 
-    return alert("Игра окончена");
+    } else {
+        alert("Игра окончена");
+    }
 }
 askAnalyzeNumber();
 }
 
-guessNumber(72);
+guessNumber(randomNum);
